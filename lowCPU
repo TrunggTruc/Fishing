@@ -41,8 +41,6 @@ local function clearTextures(v)
         v.Graphic = 1
     elseif (v:IsA("Shirt") or v:IsA("Pants")) then
         v[v.ClassName .. "Template"] = 1
-    elseif v.Name == "Foilage" and v:IsA("Folder") then
-        v:Destroy()
     elseif string.find(v.Name, "Tree") or string.find(v.Name, "Water") or string.find(v.Name, "Bush") then
         task.wait()
         v:Destroy()
