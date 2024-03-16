@@ -80,3 +80,29 @@ w.DescendantAdded:Connect(function(v)
         end
     end)
 end)
+
+        for _, v in pairs(game:GetService("Workspace"):GetChildren()) do
+            if v.Name == "ALWAYS_RENDERING" or v.Name == "Border" or v.Name == "Border2" or v.Name == "FlyBorder" or v.Name == "FlyBorder2" or v.Name == "animate" then
+                v:Destroy()
+            end
+        end
+
+        for _, v in pairs(game:GetService("Lighting"):GetChildren()) do
+            v:Destroy()
+        end
+
+        for _, v in pairs(game:GetService("CoreGui"):GetChildren()) do
+            v:Destroy()
+        end
+
+for _,v in game.Players.LocalPlayer.PlayerGui:GetChildren() do 
+    if v.Name == "Main" or v.Name == "MainLeft" or v.Name == "MainMobile" or v.Name == "GoalsSide" then
+        v:Destroy()
+    end
+end
+
+    for _, v in pairs(game:GetService("Workspace"):FindFirstChild("__THINGS"):GetChildren()) do
+        if v.Name ~= "__INSTANCE_CONTAINER" and v.Name ~= "BalloonGifts" and v.Name ~= "Items" and v.Name ~= "Lootbags" and v.Name ~= "Lootboxes" and v.Name ~= "Orbs" and v.Name ~= "Pets" and v.Name ~= "Breakables" then
+            v:Destroy()
+        end
+    end
